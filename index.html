@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        .sec-1 {
+            background-image: url('./bg-masthead.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .main-h1 {
+
+            font-size: 8vw;
+        }
+
+        .gra-clr {
+            background: #C9D6FF;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #E2E2E2, #C9D6FF);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+
+        }
+
+        .wrapper {
+            background-color: rgba(0, 0, 0, 0.527);
+
+        }
+
+        .bg-btn {
+            background-color: #5D9F9C;
+            color: whitesmoke;
+        }
+
+        .a-custom {
+            color: #5D9F9C;
+        }
+
+        .sec-2 {
+            background: #000000;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #434343, #000000);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #434343, #000000);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        @media screen and (max-width:768px) {
+            .main-h1 {
+
+                font-size: 60px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="sec-1">
+        <div class="wrapper">
+            <!-- nav start -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Start Bootstrap</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Project</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+
+                    </div>
+                </div>
+            </nav>
+            <!-- nav end -->
+
+            <div class="container border border-dark border-4">
+                <div class="row justify-content-center align-content-center border border-danger border-4"
+                    style="min-height: 700px;">
+                    <div class="col-12 col-md-8 border border-success border-4 text-center">
+                        <h1 class="gra-clr main-h1 py-3">Gray Scale</h1>
+                        <p class="fw-bold gra-clr py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Distinctio,
+                            deserunt doloribus suscipit
+                        </p>
+                        <button class="btn bg-btn my-3">Get Started</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="sec-2">
+        <div class="container border border-dark border-3">
+            <div class="row align-content-end justify-content-center border border-danger border-3"
+                style="min-height: 600px;">
+                <div class="col-12 col-md-10 border border-success border-3 text-light text-center">
+                    <h1>Lorem ipsum dolor sit.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<a href="" class="a-custom"> Omnis,
+                            facilis </a>tempore quidem similique delectus quod! Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Est dicta vero distinctio tempora quam accusantium.</p>
+                    <img src="./ipad.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
