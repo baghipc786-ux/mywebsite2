@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container col-md-6 mx-auto mt-5">
+        <h4 class="text-center mb-4">Currency Converter</h4>
+
+        <div class="card shadow p-4">
+            <div class="mb-3">
+                <label class="form-label">Amount</label>
+                <input type="number" id="amount" class="form-control" placeholder="Enter amount">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">From Currency</label>
+                <select id="fromCurrency" class="form-select">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="PKR">PKR - Pakistani Rupee</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">To Currency</label>
+                <select id="toCurrency" class="form-select">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="PKR">PKR - Pakistani Rupee</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                </select>
+            </div>
+
+            <button onclick="convertCurrency()" class="btn btn-dark w-100 mb-3">Convert</button>
+
+            <div id="result" class="alert alert-info text-center" style="display:none;"></div>
+        </div>
+    </div>
+
+    <script>
+        function convertCurrency() {
+            let amount = parseFloat(document.getElementById("amount").value);
+            let from = document.getElementById("fromCurrency").value;
+            let to = document.getElementById("toCurrency").value;
+            let resultDiv = document.getElementById("result");
+
+            if (isNaN(amount) || amount <= 0) {
+                resultDiv.style.display = "block";
+                resultDiv.className = "alert alert-danger text-center";
+                resultDiv.innerHTML = "Please enter a valid amount!";
+                return;
+            }
+
+            // Static conversion rates (example values)
+            let rates = {
+                USD: 1,
+                EUR: 0.92,
+                GBP: 0.78,
+                PKR: 278,
+                INR: 83
+            };
+
+            let convertedAmount = (amount / rates[from]) * rates[to];
+
+            resultDiv.style.display = "block";
+            resultDiv.className = "alert alert-info text-center";
+            resultDiv.innerHTML = `${amount} ${from} = <strong>${convertedAmount.toFixed(2)} ${to}</strong>`;
+        }
+    </script>
+
+</body>
+
+</html>
